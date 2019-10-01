@@ -1,0 +1,12 @@
+[package]
+name = "wdsp"
+version = "0.1.0"
+authors = ["Roger E Critchlow Jr <rec@elf.org>"]
+edition = "2018"
+
+[dependencies]
+bindgen = "0.51.1"
+
+[build-dependencies]
+bindgen = "0.51.1"
+
