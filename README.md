@@ -7,13 +7,14 @@ Wdsp is a software defined radio library written by Warren Pratt (NR0V) and port
   make
   sudo make install
 ```
-# Build and test rust interface
+# Generate bindings, if necessary.
+```
+  bindgen wrapper.h -o src/bindings.rs
+```
+# Generate and test crate
+One of the tests takes a very long time to run as it generates fftw3 wisdom for a large number of large fft sizes
+and stores it in ./.wdspWisdom00.  You may want to take a coffee break while it's running.
 ```
   cargo build
   cargo test
-```
-# Example using recorded IQ data
-
-# Example interfacing to Hermes-Lite.
-
-# Example interfacing to Softrock RX
+```	
